@@ -9,7 +9,7 @@ const DashboardLayout = () => {
   return (
     <Box display="flex" bgcolor={theme.palette.background.default}>
       <Sidebar />
-      <Box px={2} pt="25px">
+      <Box px={2} pt="25px" display="flex" flexDirection="column" flex={1}>
         <Header />
         <Outlet />
       </Box>

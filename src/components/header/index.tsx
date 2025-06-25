@@ -2,10 +2,13 @@ import { Box, Button, Typography, IconButton } from '@mui/material';
 import { Download, Sun, Moon, Tickets } from 'lucide-react';
 import { useTheme } from '@mui/material/styles';
 import { useAppTheme } from '../../contexts/Theme/hook';
+import { useLocation } from 'react-router';
+import { titleRenderer } from '../../utils/helpers';
 
 const Header = () => {
   const theme = useTheme();
   const colorMode = useAppTheme();
+  const { pathname } = useLocation();
   const isDark = theme.palette.mode === 'dark';
   return (
     <Box display="flex" justifyContent="space-between">
@@ -22,7 +25,7 @@ const Header = () => {
           <Tickets size={30} color="#555555" />
         </Box>
         <Typography variant="h5" mt={1}>
-          All Bookings
+          {titleRenderer(pathname)}
         </Typography>
       </Box>
       <Box display="flex" alignItems="center" gap={1}>

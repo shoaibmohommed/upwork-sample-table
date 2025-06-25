@@ -11,12 +11,11 @@ import {
 import Paper from '@mui/material/Paper';
 import BookingFilters from './booking-filters';
 import { columns, columnsMappings } from './table-items/columns';
-import { mockData } from './table-items/data';
 import type { BookingData } from './types';
 import { Pagination } from './table-items/pagination';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../../store';
-import { setData, setPage } from './dataSlice';
+import {  setPage } from './dataSlice';
 import { useEffect } from 'react';
 
 const renderCells = (row: BookingData, rowId: string) => {
