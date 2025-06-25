@@ -28,7 +28,7 @@ const Header = () => {
           {titleRenderer(pathname)}
         </Typography>
       </Box>
-      <Box display="flex" alignItems="center" gap={1}>
+      <Box display="flex" alignItems="center" gap="40px">
         <IconButton onClick={colorMode.toggleColorMode} color="inherit">
           {isDark ? <Sun size={20} /> : <Moon size={20} />}
         </IconButton>
@@ -39,7 +39,7 @@ const Header = () => {
             height: 40,
             padding: 0,
             minWidth: 40,
-            color: '#DADADA',
+            color: theme.palette.text.primary,
           }}
         >
           <Download />

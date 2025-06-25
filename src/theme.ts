@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material/styles';
 declare module '@mui/material/styles' {
   interface Palette {
     custom: {
+      grey: string;
       iconColor: string;
       sideBarIcon: {
         active: string;
@@ -14,6 +15,7 @@ declare module '@mui/material/styles' {
   }
   interface PaletteOptions {
     custom?: {
+      grey: string;
       iconColor: string;
       sideBarIcon: {
         active: string;
@@ -42,9 +44,10 @@ export const getTheme = (mode: 'light' | 'dark') =>
               secondary: '#555',
             },
             custom: {
+              grey: '#343434',
               iconColor: '#343434',
               iconBG: '#C6C6F9',
-              iconBGHover: '#C6C6F980',
+              iconBGHover: '#9d9dff',
               sideBarIcon: {
                 active: '#181818',
                 inactive: '#18181870',
@@ -62,9 +65,10 @@ export const getTheme = (mode: 'light' | 'dark') =>
               secondary: '#aaa',
             },
             custom: {
+              grey: '#343434',
               iconColor: '#343434',
               iconBG: '#C6C6F9',
-              iconBGHover: '#C6C6F980',
+              iconBGHover: '#9d9dff',
               sideBarIcon: {
                 active: '#DDDDDD',
                 inactive: '#555555',
@@ -83,7 +87,13 @@ export const getTheme = (mode: 'light' | 'dark') =>
           },
         },
       },
-
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            borderRadius: '8px',
+          },
+        },
+      },
       MuiListItemButton: {
         styleOverrides: {
           root: {

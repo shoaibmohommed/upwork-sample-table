@@ -153,6 +153,9 @@ const BookingFilters = () => {
           onClick={() => dispatch(applyFilters())}
           sx={{
             bgcolor: theme.palette.custom.iconBG,
+            fontWeight: 500,
+            textTransform: 'none',
+            color: theme.palette.custom.grey,
             '&:hover': { bgcolor: theme.palette.custom.iconBGHover },
             width: 130,
             height: 40,

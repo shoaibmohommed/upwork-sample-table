@@ -18,7 +18,6 @@ import { menuItems } from '../../utils/helpers';
 const expandedWidth = 200;
 const collapsedWidth = 65;
 
-
 const MenuList = ({ open }: { open: boolean }) => {
   const theme = useTheme();
   const { pathname } = useLocation();
@@ -71,7 +70,11 @@ const MenuList = ({ open }: { open: boolean }) => {
             }}
           >
             {item.Icon}
-            {showText && <Typography variant="body2">{item.title}</Typography>}
+            {showText && (
+              <Typography variant="body2" color={theme.palette.text.primary}>
+                {item.title}
+              </Typography>
+            )}
           </ListItemButton>
         </Link>
       ))}
