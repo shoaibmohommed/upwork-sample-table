@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.active-link {
+  svg {
+    path {
+      fill: #555555;
+    }
+  }
+}
+.inactive-link {
+  svg {
+    path {
+      fill: #dddddd;
+      // stroke:#555555
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
