@@ -8,7 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material';
-import { Search as SearchIcon } from '@mui/icons-material';
+import SearchIcon from '@mui/icons-material/Search';
 import { type ChangeEvent } from 'react';
 import type { RootState } from '../../../store';
 import { useDispatch, useSelector } from 'react-redux';

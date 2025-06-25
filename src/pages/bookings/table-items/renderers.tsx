@@ -1,6 +1,7 @@
 import { Chip, IconButton, Tooltip, Typography, Box } from '@mui/material';
 import type { BookingData } from '../types';
-import { Circle as CircleIcon, EditOutlined } from '@mui/icons-material';
+import CircleIcon from '@mui/icons-material/Circle';
+import EditOutlined from '@mui/icons-material/EditOutlined';
 
 const getStatusChipColor = (status: BookingData['tripStatus']): string => {
   switch (status) {
